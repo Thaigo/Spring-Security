@@ -1,17 +1,17 @@
 package com.security.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class PostController {
 
-	@GetMapping("/posts/")
+	@RequestMapping("/posts/")
 	public String listar(){
 		return "listar posts";
 	}
 	
-	@GetMapping("/admin/posts/new")
+	@RequestMapping("/admin/posts/new")
 	public String addPost() {
 		return "add Post...";
 	}
